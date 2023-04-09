@@ -14,15 +14,15 @@ const PlanetsSlider = props => {
   }
 
   return (
-    <div className="slider-container">
+    <div className="slider-container" data-testid="planets">
       <div className="app-container">
-        <Slider {...settings}>
-          <ul className="planets-bg-container">
+        <ul className="planets-bg-container">
+          <Slider {...settings}>
             {planetsList.map(eachPlanet => (
               <PlanetItem planetDetails={eachPlanet} key={eachPlanet.id} />
             ))}
-          </ul>
-        </Slider>
+          </Slider>
+        </ul>
       </div>
     </div>
   )
